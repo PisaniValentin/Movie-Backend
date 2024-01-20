@@ -17,11 +17,13 @@ public class ElasticSearchService {
     private ElasticsearchClient elasticsearchClient;
 
     public SearchResponse<Product> autoSuggestProduct(String partialProductName) throws IOException {
+        // Create a Supplier that supplies an Elasticsearch Query for auto-suggest
         Supplier<Query> supplier = ElasticSearchUtil.createSupplierAutoSuggest(partialProductName);
+        // Perform the Elasticsearch search using the Elasticsearch client
         SearchResponse<Product> searchResponse =
                 elasticsearchClient
                         .search(s-> s.index("products").query(supplier.get()),Product.class);
-        System.out.println("elastic search:"+ supplier.get().toString());
+        // Return the SearchResponse containing the results
         return searchResponse;
     }
 }
