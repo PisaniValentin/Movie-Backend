@@ -4,6 +4,8 @@ import com.freemarket.market.models.Product;
 import com.freemarket.market.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -20,7 +22,7 @@ public class ProductService {
     }
 
     public void removeProduct(int id){
-        productRepository.deleteById(id);
+       productRepository.deleteById(id);
     }
 
     public void editProduct(Product p,int id){
@@ -31,5 +33,9 @@ public class ProductService {
             product.get().setQuantity(p.getQuantity());
             product.get().setName(p.getName());
         }
+    }
+
+    public List<Product> getSuggest(String name){
+        return productRepository.findByNameOrderByIdAsc(name);
     }
 }
