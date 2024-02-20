@@ -1,4 +1,4 @@
-package com.freemarket.market.models;
+package com.freemarket.movies.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.elasticsearch.annotations.Document;

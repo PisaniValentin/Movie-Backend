@@ -1,7 +1,7 @@
-package com.freemarket.market.services;
+package com.freemarket.movies.services;
 
-import com.freemarket.market.models.NetflixMovie;
-import com.freemarket.market.repositories.NetflixMovieRepository;
+import com.freemarket.movies.models.NetflixMovie;
+import com.freemarket.movies.repositories.NetflixMovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

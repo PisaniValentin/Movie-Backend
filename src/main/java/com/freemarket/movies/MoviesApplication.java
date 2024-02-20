@@ -1,13 +1,13 @@
-package com.freemarket.market;
+package com.freemarket.movies;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MarketApplication {
+public class MoviesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MarketApplication.class, args);
+		SpringApplication.run(MoviesApplication.class, args);
 	}
 
 }
