@@ -1,5 +1,4 @@
 This web application allows the user to quickly search through a large dataset using ElasticSearch.  
-The backend repository: https://github.com/PisaniValentin/Movie-Backend  
 
 The Elastic search configuration used for this project:  
 <pre>
